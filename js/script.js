@@ -33,7 +33,7 @@ handleInternet(); //check internet connection
 
 //get all data from json
 async function getData() {
-  const req = await fetch("/technologyEcommerce/data/data.json");
+  const req = await fetch("data/data.json");
   let { products } = await req.json();
   return products;
 }
