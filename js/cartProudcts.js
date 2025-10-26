@@ -23,7 +23,7 @@ if (productInCart) {
   drawProudectCart(JSON.parse(productInCart));
 }
 async function getData() {
-  let req = await fetch("../data/data.json");
+  let req = await fetch("/data/data.json");
   let { products } = await req.json();
   return products;
 }
