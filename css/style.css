@@ -1,0 +1,218 @@
+.noInternet .container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+}
+
+/* ------------------------------------------------------------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 200;
+}
+
+main {
+    margin-top: 70px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li a {
+    display: block;
+    color: #000;
+    min-width: 80px;
+    padding: 3px;
+    margin: 0px 4px;
+}
+
+/* ------------------------------------------------------------------------- */
+
+/* ------------------------- form ------------------------------------------ */
+
+.section-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 50%;
+    text-align: center;
+    /* background-color: #0a9e02; */
+    padding: 30px;
+}
+
+.section-form h2 {
+    font-size: 50px;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+.section-form form input {
+    display: block;
+    width: 100%;
+    margin: 5px 0px;
+    height: 30px;
+    border: 1px solid #ddd;
+    padding: 5px;
+    font-family: cursive;
+    /* input not inherint from body لا يخضع لقوانين البادي*/
+    outline: none;
+}
+
+.section-form form input[type="submit"]:hover {
+    opacity: .5;
+}
+
+#user {
+    /* color: #fff; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: capitalize;
+    display: none;
+}
+
+nav ul#userInfo {
+    margin: 1rem 0rem;
+    display: none;
+}
+
+nav ul#userInfo li i {
+    color: #000;
+    font-size: 25px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+nav ul#userInfo li {
+    position: relative;
+}
+
+nav ul#userInfo li .badge {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    color: #007bff;
+    text-align: center;
+    /* display: block; */
+    border-radius: 50%;
+    top: -8px;
+    right: 16px;
+    font-size: 15px;
+    display: none;
+}
+nav #links li a,#logOut{
+    color: #fff;
+}
+
+.ViewPro{
+    width: 94%;
+}
+/* bg-light text-primary pr-4 text-center m-auto */
+/* ---------------------------------------------------------------------------------------------------------------- */
+/* --------------------------------- home --------------------------------- */
+.Home {
+    margin: 5rem auto;
+    padding: 0 3rem;
+    position: relative;
+}
+
+.fas {
+    color: #007bff;
+}
+
+.far {
+    color: #5bc0de;
+}
+
+.cartsProudect {
+    position: absolute; 
+    width: 300px;
+    transform: translate(-105px, 0);
+    top: 51px;
+    border: 1px solid #007bff;
+    display: none;
+}
+
+.buyProudect {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: .5rem;
+}
+
+.buyProudect .mins,
+.buyProudect .pls {
+    height: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+.buyProudect .pls{
+    padding: 0px 20px 25px 10px;
+}
+.buyProudect .mins{
+    padding: 0px 17px 25px 13px;
+}
+.buyProudect div {
+    background-color: #fff;
+    padding: .5rem 0rem;
+    color: #007bff;
+    border-radius: 5px;
+}
+
+.product-item-action i {
+    font-size: 30px;
+    cursor: pointer;
+}
+.product-item {
+    transition: 0.5s;
+}
+.product-item:hover {
+    /* transform: translate(10%, 10%); */
+    transform: scale(1.1);
+    /* transition: .5s; */
+}
+
+.card .product-item-action .RemoveFromCartBtn {
+    display: none;
+}
+
+.card .product-item-action .AddToCartBtn {
+    display: inline-block;
+}
+
+.fav{
+margin: 3rem 0rem 5rem 0rem;
+} 
+
+.line{
+    width: 100px;
+    margin: auto;
+    height: 2px;
+    background-color: #007bff;
+}
+.fav-Header:hover .line{
+    transform: scale(1.5);
+    transition: .5s;
+}
+
+/* ----------------------------- */
