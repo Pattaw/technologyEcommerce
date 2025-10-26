@@ -34,10 +34,9 @@ handleInternet(); //check internet connection
 //get all data from json
 async function getData() {
   try {
-    // Detect your GitHub repo name automatically (works locally and on GitHub Pages)
-    const repoName = window.location.pathname.split('/')[1]; 
-    const response = await fetch(`/${repoName}/data/data.json`);
-    
+    // Force GitHub Pages to use correct repo name path
+    const response = await fetch("/technologyEcommerce/data/data.json");
+
     if (!response.ok) {
       throw new Error(`Failed to load data.json: ${response.status}`);
     }
@@ -49,6 +48,7 @@ async function getData() {
     return [];
   }
 }
+
 
 
 function loadData(item, heightImage, heartIconClass) {
