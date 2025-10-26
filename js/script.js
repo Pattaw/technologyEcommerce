@@ -33,10 +33,23 @@ handleInternet(); //check internet connection
 
 //get all data from json
 async function getData() {
-  const req = await fetch("data/data.json");
-  let { products } = await req.json();
-  return products;
+  try {
+    // Detect your GitHub repo name automatically (works locally and on GitHub Pages)
+    const repoName = window.location.pathname.split('/')[1]; 
+    const response = await fetch(`/${repoName}/data/data.json`);
+    
+    if (!response.ok) {
+      throw new Error(`Failed to load data.json: ${response.status}`);
+    }
+
+    const { products } = await response.json();
+    return products;
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    return [];
+  }
 }
+
 
 function loadData(item, heightImage, heartIconClass) {
   return `
